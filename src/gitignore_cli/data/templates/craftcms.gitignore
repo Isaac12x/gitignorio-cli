@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/craftcms
+# Edit at https://www.toptal.com/developers/gitignore?templates=craftcms
+
+### CraftCMS ###
+# Craft 2 Storage (https://craftcms.com/support/craft-storage-gitignore)
+# not necessary for Craft 3 (https://github.com/craftcms/craft/issues/26)
+/craft/storage/*
+!/craft/storage/rebrand
+
+# End of https://www.toptal.com/developers/gitignore/api/craftcms

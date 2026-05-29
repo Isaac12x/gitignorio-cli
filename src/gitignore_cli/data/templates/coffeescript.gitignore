@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/coffeescript
+# Edit at https://www.toptal.com/developers/gitignore?templates=coffeescript
+
+### CoffeeScript ###
+*.js
+
+# End of https://www.toptal.com/developers/gitignore/api/coffeescript

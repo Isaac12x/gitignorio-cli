@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/robotframework
+# Edit at https://www.toptal.com/developers/gitignore?templates=robotframework
+
+### robotframework ###
+log.html
+output.xml
+report.html
+selenium-screenshot-*.png
+
+# End of https://www.toptal.com/developers/gitignore/api/robotframework

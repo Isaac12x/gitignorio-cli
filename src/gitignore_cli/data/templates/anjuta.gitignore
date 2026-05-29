@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/anjuta
+# Edit at https://www.toptal.com/developers/gitignore?templates=anjuta
+
+### Anjuta ###
+# Local configuration folder and symbol database
+/.anjuta/
+/.anjuta_sym_db.db
+
+# End of https://www.toptal.com/developers/gitignore/api/anjuta

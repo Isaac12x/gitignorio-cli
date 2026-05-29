@@ -1,0 +1,35 @@
+# Created by https://www.toptal.com/developers/gitignore/api/kirby3
+# Edit at https://www.toptal.com/developers/gitignore?templates=kirby3
+
+### Kirby3 ###
+# Uncomment if you install core files via composer
+# kirby
+# site/plugins/*
+
+# Temporary files
+/media/*
+!/media/index.html
+
+# Lock files
+.lock
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Cache Files
+/site/cache/*
+!/site/cache/index.html
+
+# Accounts
+/site/accounts/*
+!/site/accounts/index.html
+
+# Sessions
+/site/sessions/*
+!/site/sessions/index.html
+
+# License
+/site/config/.license
+
+# End of https://www.toptal.com/developers/gitignore/api/kirby3

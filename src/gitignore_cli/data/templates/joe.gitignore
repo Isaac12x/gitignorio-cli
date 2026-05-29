@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/joe
+# Edit at https://www.toptal.com/developers/gitignore?templates=joe
+
+### Joe ###
+# File backups
+*~
+# Gets created when joe crashes
+DEADJOE
+
+# End of https://www.toptal.com/developers/gitignore/api/joe

@@ -56,6 +56,17 @@ class GitignoreFile:
         template = template.lower()
         return template in self.templates or template in self.sections
 
+    def template_present(self, store: TemplateStore, template: str, content: str | None = None) -> bool:
+        template = template.lower()
+        if self.has_template(template):
+            return True
+        if content is None:
+            content = self.path.read_text(encoding="utf-8") if self.path.exists() else ""
+        if not content:
+            return False
+        title = store.section_title(template)
+        return f"### {title} ###" in content
+
     def os_templates(self) -> list[str]:
         return [template for template in self.templates if template in OS_TEMPLATES]
 
@@ -102,26 +113,25 @@ class GitignoreFile:
         self.managed = True
         return True
 
-    def update_templates(
-        self,
-        store: TemplateStore,
-        *,
-        os_template: str,
-        detected_languages: set[str],
-    ) -> tuple[list[str], list[str], list[str]]:
-        current_os = self.os_templates()
-        current_langs = set(self.language_templates())
+    def append_templates(self, store: TemplateStore, templates: list[str]) -> list[str]:
+        """Append template sections without rewriting existing file content."""
+        content = self.path.read_text(encoding="utf-8") if self.path.exists() else ""
+        added: list[str] = []
 
-        next_templates = [os_template]
-        if current_os and os_template not in current_os:
-            for old_os in current_os:
-                self.sections.pop(old_os, None)
+        for template in store.sort_templates(templates):
+            if self.template_present(store, template, content):
+                continue
+            section = store.section_for_template(template).strip()
+            if content and not content.endswith("\n"):
+                content += "\n"
+            if content.strip():
+                content += "\n"
+            content += section + "\n"
+            added.append(template)
+            if template not in self.templates:
+                self.templates.append(template)
+            self.sections[template] = section
 
-        added = sorted(detected_languages - current_langs)
-        removed = sorted(current_langs - detected_languages)
-        for template in removed:
-            self.sections.pop(template, None)
-
-        next_templates.extend(sorted(current_langs - set(removed)))
-        next_templates.extend(added)
-        return store.sort_templates(next_templates), added, removed
+        if added:
+            self.path.write_text(content, encoding="utf-8")
+        return added

@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/basic
+# Edit at https://www.toptal.com/developers/gitignore?templates=basic
+
+### Basic ###
+# Apples Build
+*.build
+*.apples
+
+# Initialized files
+*.exe
+*.ini
+*.basic
+
+# End of https://www.toptal.com/developers/gitignore/api/basic

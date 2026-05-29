@@ -1,0 +1,18 @@
+# Created by https://www.toptal.com/developers/gitignore/api/compressed
+# Edit at https://www.toptal.com/developers/gitignore?templates=compressed
+
+### Compressed ###
+*.7z
+*.deb
+*.gz
+*.pkg
+*.rar
+*.rpm
+*.sit
+*.sitx
+*.tar
+*.zip
+*.zipx
+*.tgz
+
+# End of https://www.toptal.com/developers/gitignore/api/compressed

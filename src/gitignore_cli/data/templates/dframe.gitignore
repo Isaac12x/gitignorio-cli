@@ -1,0 +1,22 @@
+# Created by https://www.toptal.com/developers/gitignore/api/dframe
+# Edit at https://www.toptal.com/developers/gitignore?templates=dframe
+
+### Dframe ###
+# Ignore files that are auto-generated
+app/View/templates_c/*
+app/View/cache/*
+app/View/logs/*
+web/assets/*
+vendor
+
+# Force include
+!app/View/templates_c/.gitkeep
+!app/View/cache/.gitkeep
+!app/View/logs/.gitkeep
+!web/assets/.gitkeep
+
+# Ignore IDE
+.project
+.vscode/
+
+# End of https://www.toptal.com/developers/gitignore/api/dframe

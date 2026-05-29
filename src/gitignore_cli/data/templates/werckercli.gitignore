@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/werckercli
+# Edit at https://www.toptal.com/developers/gitignore?templates=werckercli
+
+### WerckerCLI ###
+_steps
+_builds
+_cache
+_projects
+
+# End of https://www.toptal.com/developers/gitignore/api/werckercli

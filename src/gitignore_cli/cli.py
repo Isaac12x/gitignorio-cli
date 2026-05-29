@@ -8,6 +8,7 @@ import typer
 from gitignore_cli.deps import ensure_detection_tools
 from gitignore_cli.detect import detect_languages, detect_os_template, normalize_user_template
 from gitignore_cli.file import GitignoreFile
+from gitignore_cli.hooks import install_global_template, install_repo_hooks
 from gitignore_cli.templates import get_store
 
 app = typer.Typer(
@@ -68,7 +69,7 @@ def update(
         help="Repository path (defaults to current directory).",
     ),
 ) -> None:
-    """Update .gitignore by adding newly detected languages and removing unused ones."""
+    """Update .gitignore by appending newly detected languages."""
     ensure_detection_tools()
     repo_path = _repo_path(path)
     gitignore_path = _gitignore_path(repo_path)
@@ -81,38 +82,21 @@ def update(
 
     document = GitignoreFile.load(gitignore_path, store)
     detected = detect_languages(repo_path, store)
+    content = gitignore_path.read_text(encoding="utf-8")
 
-    if not document.managed:
-        added: list[str] = []
-        if not document.templates:
-            document.templates = [os_template]
-            document.managed = True
-        for template in sorted(detected):
-            if document.add_template(store, template):
-                added.append(template)
-        document.write(store, store.sort_templates(document.templates))
-        if added:
-            typer.echo(f"Added: {', '.join(added)}")
-            typer.echo(f"Updated {gitignore_path}")
-        else:
-            typer.echo("No changes needed.")
-        return
+    to_add: list[str] = []
+    if not document.template_present(store, os_template, content):
+        to_add.append(os_template)
+    for template in sorted(detected):
+        if not document.template_present(store, template, content):
+            to_add.append(template)
 
-    templates, added, removed = document.update_templates(
-        store,
-        os_template=os_template,
-        detected_languages=detected,
-    )
-    document.write(store, templates)
-
+    added = document.append_templates(store, to_add)
     if added:
         typer.echo(f"Added: {', '.join(added)}")
-    if removed:
-        typer.echo(f"Removed: {', '.join(removed)}")
-    if not added and not removed:
-        typer.echo("No changes needed.")
-    else:
         typer.echo(f"Updated {gitignore_path}")
+    else:
+        typer.echo("No changes needed.")
 
 
 @app.command()
@@ -135,7 +119,8 @@ def add(
         raise typer.Exit(code=1)
 
     document = GitignoreFile.load(gitignore_path, store)
-    added: list[str] = []
+    content = gitignore_path.read_text(encoding="utf-8")
+    to_add: list[str] = []
     skipped: list[str] = []
 
     for language in languages:
@@ -144,17 +129,13 @@ def add(
         except ValueError as exc:
             typer.echo(str(exc), err=True)
             raise typer.Exit(code=1) from exc
-        if document.add_template(store, template):
-            added.append(template)
-        else:
+        if document.template_present(store, template, content):
             skipped.append(template)
+        else:
+            to_add.append(template)
 
-    if not document.templates:
-        document.templates = [detect_os_template()]
-        document.managed = True
-
+    added = document.append_templates(store, to_add)
     if added:
-        document.write(store, store.sort_templates(document.templates))
         typer.echo(f"Added: {', '.join(added)}")
     if skipped:
         typer.echo(f"Already present: {', '.join(skipped)}")
@@ -168,6 +149,40 @@ def list_templates() -> None:
     store = get_store()
     for template in store.sort_templates(list(store.available)):
         typer.echo(template)
+
+
+hooks_app = typer.Typer(help="Install git hooks for automatic .gitignore management.")
+app.add_typer(hooks_app, name="hooks")
+
+
+@hooks_app.command("install")
+def hooks_install(
+    path: Optional[Path] = typer.Option(
+        None,
+        "--path",
+        "-p",
+        help="Repository path (defaults to current directory).",
+    ),
+    global_template: bool = typer.Option(
+        False,
+        "--global",
+        help="Also install hooks into the global git init template for new repositories.",
+    ),
+) -> None:
+    """Install post-checkout and pre-push hooks (create or update existing hook scripts)."""
+    repo_path = _repo_path(path)
+    try:
+        results = install_repo_hooks(repo_path)
+    except RuntimeError as exc:
+        typer.echo(str(exc), err=True)
+        raise typer.Exit(code=1) from exc
+
+    for name, status in results:
+        typer.echo(f"{status.capitalize()} {name} hook")
+
+    if global_template:
+        template_dir = install_global_template()
+        typer.echo(f"Configured global init.templateDir at {template_dir}")
 
 
 def main() -> None:

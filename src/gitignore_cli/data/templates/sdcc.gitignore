@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/sdcc
+# Edit at https://www.toptal.com/developers/gitignore?templates=sdcc
+
+### Sdcc ###
+# SDCC stuff
+*.lnk
+*.lst
+*.map
+*.mem
+*.rel
+*.rst
+*.sym
+
+# End of https://www.toptal.com/developers/gitignore/api/sdcc

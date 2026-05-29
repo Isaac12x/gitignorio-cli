@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/notepadpp
+# Edit at https://www.toptal.com/developers/gitignore?templates=notepadpp
+
+### NotepadPP ###
+# Notepad++ backups #
+*.bak
+
+# End of https://www.toptal.com/developers/gitignore/api/notepadpp

@@ -1,0 +1,18 @@
+# Created by https://www.toptal.com/developers/gitignore/api/meteor
+# Edit at https://www.toptal.com/developers/gitignore?templates=meteor
+
+### Meteor ###
+# gitignore template for the Meteor framework
+# website: https://www.meteor.com/
+#
+# Recommended template: Node.gitignore
+
+# protect api keys in setting json
+settings-production.json
+settings.json
+
+# protect your mup.json settings
+mup.json
+mup.js
+
+# End of https://www.toptal.com/developers/gitignore/api/meteor

@@ -1,0 +1,16 @@
+# Created by https://www.toptal.com/developers/gitignore/api/pulumi+stacks
+# Edit at https://www.toptal.com/developers/gitignore?templates=pulumi+stacks
+
+### Pulumi+stacks ###
+# Ignore temp build directory for Pulumi
+# Info: https://www.pulumi.com/docs/
+
+.pulumi/
+
+### Pulumi+stacks Patch ###
+# Pulumi stacks configuration files
+# See https://www.pulumi.com/docs/intro/concepts/project/#stack-settings-file
+
+Pulumi.*.yaml
+
+# End of https://www.toptal.com/developers/gitignore/api/pulumi+stacks

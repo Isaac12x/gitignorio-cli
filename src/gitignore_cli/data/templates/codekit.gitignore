@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/codekit
+# Edit at https://www.toptal.com/developers/gitignore?templates=codekit
+
+### CodeKit ###
+# General CodeKit files to ignore
+config.codekit
+config.codekit3
+/min
+
+### CodeKit Patch ###
+*/codekit-config.json
+.codekit-cache
+
+# End of https://www.toptal.com/developers/gitignore/api/codekit

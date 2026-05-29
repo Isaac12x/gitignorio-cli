@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bitrise
+# Edit at https://www.toptal.com/developers/gitignore?templates=bitrise
+
+### Bitrise ###
+.bitrise.secrets.yml
+
+# End of https://www.toptal.com/developers/gitignore/api/bitrise

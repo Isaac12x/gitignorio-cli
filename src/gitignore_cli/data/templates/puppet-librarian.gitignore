@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/puppet-librarian
+# Edit at https://www.toptal.com/developers/gitignore?templates=puppet-librarian
+
+### puppet-librarian ###
+# puppet-librarian - https://github.com/rodjek/librarian-puppet
+.tmp/
+modules/
+
+# End of https://www.toptal.com/developers/gitignore/api/puppet-librarian

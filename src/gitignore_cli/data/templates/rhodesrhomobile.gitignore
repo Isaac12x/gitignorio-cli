@@ -1,0 +1,15 @@
+# Created by https://www.toptal.com/developers/gitignore/api/rhodesrhomobile
+# Edit at https://www.toptal.com/developers/gitignore?templates=rhodesrhomobile
+
+### RhodesRhomobile ###
+rholog-*
+sim-*
+bin/libs
+bin/RhoBundle
+bin/tmp
+bin/target
+bin/*.ap_
+*.o
+*.jar
+
+# End of https://www.toptal.com/developers/gitignore/api/rhodesrhomobile

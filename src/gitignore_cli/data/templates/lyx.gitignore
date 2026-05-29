@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/lyx
+# Edit at https://www.toptal.com/developers/gitignore?templates=lyx
+
+### LyX ###
+# Ignore LyX backup and autosave files
+# http://www.lyx.org/
+*.lyx~
+*.lyx#
+
+# End of https://www.toptal.com/developers/gitignore/api/lyx

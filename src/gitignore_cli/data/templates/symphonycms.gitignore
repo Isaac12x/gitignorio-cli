@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/symphonycms
+# Edit at https://www.toptal.com/developers/gitignore?templates=symphonycms
+
+### SymphonyCMS ###
+manifest/cache/
+manifest/logs/
+manifest/tmp/
+symphony/
+workspace/uploads/
+install-log.txt
+
+# End of https://www.toptal.com/developers/gitignore/api/symphonycms

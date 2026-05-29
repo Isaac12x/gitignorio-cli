@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/wyam
+# Edit at https://www.toptal.com/developers/gitignore?templates=wyam
+
+### Wyam ###
+# Wyam Ignore - Based on https://wyam.io/docs/advanced/what_to_exclude_from_source_control
+output/*
+config.wyam.dll
+config.wyam.hash
+*packages.xml
+
+# End of https://www.toptal.com/developers/gitignore/api/wyam

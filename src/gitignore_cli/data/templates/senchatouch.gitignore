@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/senchatouch
+# Edit at https://www.toptal.com/developers/gitignore?templates=senchatouch
+
+### SenchaTouch ###
+# Build and Release Folders
+archive/
+build/
+
+# sass cache folder
+resources/sass/.sass-cache/
+
+# End of https://www.toptal.com/developers/gitignore/api/senchatouch

@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/hexo
+# Edit at https://www.toptal.com/developers/gitignore?templates=hexo
+
+### Hexo ###
+db.json
+public/
+.deploy_git/
+
+# End of https://www.toptal.com/developers/gitignore/api/hexo

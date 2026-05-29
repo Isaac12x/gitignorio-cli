@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/remix+cloudflareworkers
+# Edit at https://www.toptal.com/developers/gitignore?templates=remix+cloudflareworkers
+
+### Remix+CloudflareWorkers ###
+/dist
+/.mf
+
+# End of https://www.toptal.com/developers/gitignore/api/remix+cloudflareworkers

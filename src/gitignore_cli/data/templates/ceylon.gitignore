@@ -1,0 +1,15 @@
+# Created by https://www.toptal.com/developers/gitignore/api/ceylon
+# Edit at https://www.toptal.com/developers/gitignore?templates=ceylon
+
+### Ceylon ###
+# build
+modules
+test-modules
+
+# fat-jar build
+*.jar
+
+# Auto backup setting file
+.ceylon/config.old
+
+# End of https://www.toptal.com/developers/gitignore/api/ceylon

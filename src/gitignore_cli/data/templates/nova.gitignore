@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/nova
+# Edit at https://www.toptal.com/developers/gitignore?templates=nova
+
+### nova ###
+.nova/*
+
+# End of https://www.toptal.com/developers/gitignore/api/nova

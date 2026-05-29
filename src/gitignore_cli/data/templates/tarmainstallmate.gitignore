@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/tarmainstallmate
+# Edit at https://www.toptal.com/developers/gitignore?templates=tarmainstallmate
+
+### TarmaInstallMate ###
+# Workspace files
+*.iw7
+*.iw9
+
+# Build log files
+*.log
+
+# End of https://www.toptal.com/developers/gitignore/api/tarmainstallmate

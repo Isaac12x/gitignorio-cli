@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/lilypond
+# Edit at https://www.toptal.com/developers/gitignore?templates=lilypond
+
+### Lilypond ###
+*.pdf
+*.ps
+*.midi
+*.mid
+*.log
+*~
+
+# End of https://www.toptal.com/developers/gitignore/api/lilypond

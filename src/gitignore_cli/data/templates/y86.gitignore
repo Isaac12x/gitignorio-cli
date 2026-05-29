@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/y86
+# Edit at https://www.toptal.com/developers/gitignore?templates=y86
+
+### Y86 ###
+# Object File
+*.yo
+
+# End of https://www.toptal.com/developers/gitignore/api/y86

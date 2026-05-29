@@ -1,0 +1,19 @@
+# Created by https://www.toptal.com/developers/gitignore/api/opa
+# Edit at https://www.toptal.com/developers/gitignore?templates=opa
+
+### Opa ###
+_build
+_tracks
+
+opa-debug-js
+
+*.opp
+*.opx
+*.opx.broken
+*.dump
+*.api
+*.api-txt
+*.exe
+*.log
+
+# End of https://www.toptal.com/developers/gitignore/api/opa

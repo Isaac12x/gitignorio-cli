@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/lighthouseci
+# Edit at https://www.toptal.com/developers/gitignore?templates=lighthouseci
+
+### LighthouseCI ###
+# Lighthouse reports
+.lighthouseci/
+
+# End of https://www.toptal.com/developers/gitignore/api/lighthouseci

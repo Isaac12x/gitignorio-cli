@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/arcanist
+# Edit at https://www.toptal.com/developers/gitignore?templates=arcanist
+
+### Arcanist ###
+.phutil_module_cache
+.divinercache/
+
+# End of https://www.toptal.com/developers/gitignore/api/arcanist

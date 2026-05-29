@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/infer
+# Edit at https://www.toptal.com/developers/gitignore?templates=infer
+
+### infer ###
+# infer- http://fbinfer.com/
+infer-out
+
+# End of https://www.toptal.com/developers/gitignore/api/infer

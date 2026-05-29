@@ -1,0 +1,16 @@
+# Created by https://www.toptal.com/developers/gitignore/api/geth
+# Edit at https://www.toptal.com/developers/gitignore?templates=geth
+
+### Geth ###
+# .gitignore for Geth 0.4.16
+
+# caches
+/geth
+/keystore
+history
+
+# logs
+*.out
+*.log
+
+# End of https://www.toptal.com/developers/gitignore/api/geth

@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/remix+arc
+# Edit at https://www.toptal.com/developers/gitignore?templates=remix+arc
+
+### Remix+Arc ###
+/server/index.js
+preferences.arc
+sam.json
+sam.yaml
+
+# End of https://www.toptal.com/developers/gitignore/api/remix+arc

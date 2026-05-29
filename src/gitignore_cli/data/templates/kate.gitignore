@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/kate
+# Edit at https://www.toptal.com/developers/gitignore?templates=kate
+
+### Kate ###
+# Swap Files #
+.*.kate-swp
+.swp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/kate

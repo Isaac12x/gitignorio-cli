@@ -1,0 +1,18 @@
+# Created by https://www.toptal.com/developers/gitignore/api/cfwheels
+# Edit at https://www.toptal.com/developers/gitignore?templates=cfwheels
+
+### CFWheels ###
+# unpacked plugin folders
+plugins/**/*
+
+# files directory where uploads go
+files
+
+# DBMigrate plugin: generated SQL
+db/sql
+
+# AssetBundler plugin: generated bundles
+javascripts/bundles
+stylesheets/bundles
+
+# End of https://www.toptal.com/developers/gitignore/api/cfwheels

@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bower
+# Edit at https://www.toptal.com/developers/gitignore?templates=bower
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+# End of https://www.toptal.com/developers/gitignore/api/bower

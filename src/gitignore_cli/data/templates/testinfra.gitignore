@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/testinfra
+# Edit at https://www.toptal.com/developers/gitignore?templates=testinfra
+
+### Testinfra ###
+__pycache__/
+.pytest_cache/
+
+# End of https://www.toptal.com/developers/gitignore/api/testinfra

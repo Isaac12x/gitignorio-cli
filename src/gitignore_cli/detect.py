@@ -6,6 +6,7 @@ import subprocess
 from pathlib import Path
 
 from gitignore_cli.deps import _linguist_commands, extended_env
+from gitignore_cli.ignored_dirs import dir_name_is_ignored, path_is_ignored
 from gitignore_cli.mapping import SKIP_MAGIKA_LABELS, resolve_template
 from gitignore_cli.templates import TemplateStore
 
@@ -57,17 +58,28 @@ SPECIAL_FILES: dict[str, str] = {
     "pyproject.toml": "python",
     "requirements.txt": "python",
 }
-IGNORED_DIRS = {
-    ".git",
-    ".hg",
-    ".svn",
-    "node_modules",
-    ".venv",
-    "venv",
-    "dist",
-    "build",
-    "__pycache__",
-}
+
+_MAGIKA_BATCH_SIZE = 500
+
+
+def _walk_repo_files(repo_path: Path) -> list[Path]:
+    files: list[Path] = []
+
+    def walk(directory: Path) -> None:
+        try:
+            entries = list(directory.iterdir())
+        except OSError:
+            return
+        for entry in entries:
+            if dir_name_is_ignored(entry.name):
+                continue
+            if entry.is_file():
+                files.append(entry)
+            elif entry.is_dir():
+                walk(entry)
+
+    walk(repo_path)
+    return files
 
 
 def detect_os_template() -> str:
@@ -109,7 +121,7 @@ def _parse_magika_json(output: str, store: TemplateStore) -> set[str]:
 
     for entry in entries:
         path = entry.get("path", "")
-        if "/.git/" in path.replace("\\", "/") or path.endswith("/.git"):
+        if path_is_ignored(path):
             continue
 
         result = entry.get("result", {})
@@ -131,11 +143,7 @@ def _parse_magika_json(output: str, store: TemplateStore) -> set[str]:
 
 def _detect_from_extensions(repo_path: Path, store: TemplateStore) -> set[str]:
     templates: set[str] = set()
-    for path in repo_path.rglob("*"):
-        if not path.is_file():
-            continue
-        if any(part in IGNORED_DIRS for part in path.parts):
-            continue
+    for path in _walk_repo_files(repo_path):
 
         special = SPECIAL_FILES.get(path.name)
         if special:
@@ -154,10 +162,8 @@ def _detect_from_extensions(repo_path: Path, store: TemplateStore) -> set[str]:
 
 
 def _has_extension(repo_path: Path, suffix: str) -> bool:
-    for path in repo_path.rglob(f"*{suffix}"):
-        if path.is_file() and not any(part in IGNORED_DIRS for part in path.parts):
-            return True
-    return False
+    suffix = suffix.lower()
+    return any(path.suffix.lower() == suffix for path in _walk_repo_files(repo_path))
 
 
 def _refine_detected(repo_path: Path, detected: set[str]) -> set[str]:
@@ -165,6 +171,34 @@ def _refine_detected(repo_path: Path, detected: set[str]) -> set[str]:
     if "python" in refined and "lua" in refined and not _has_extension(repo_path, ".lua"):
         refined.discard("lua")
     return refined
+
+
+def _run_magika(repo_path: Path) -> str | None:
+    files = _walk_repo_files(repo_path)
+    if not files:
+        return "[]"
+
+    combined: list[dict] = []
+    for start in range(0, len(files), _MAGIKA_BATCH_SIZE):
+        batch = files[start : start + _MAGIKA_BATCH_SIZE]
+        result = subprocess.run(
+            ["magika", "--json", *[str(path) for path in batch]],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=extended_env(),
+            timeout=300,
+        )
+        if result.returncode != 0:
+            return None
+        try:
+            entries = json.loads(result.stdout)
+        except json.JSONDecodeError:
+            return None
+        if isinstance(entries, list):
+            combined.extend(entries)
+
+    return json.dumps(combined)
 
 
 def _run_linguist(repo_path: Path) -> subprocess.CompletedProcess[str]:
@@ -194,16 +228,9 @@ def detect_languages(repo_path: Path, store: TemplateStore) -> set[str]:
     if linguist.returncode == 0:
         detected |= _parse_linguist_breakdown(linguist.stdout, store)
 
-    magika = subprocess.run(
-        ["magika", "--json", "-r", str(repo_path)],
-        capture_output=True,
-        text=True,
-        check=False,
-        env=extended_env(),
-        timeout=300,
-    )
-    if magika.returncode == 0:
-        detected |= _parse_magika_json(magika.stdout, store)
+    magika_output = _run_magika(repo_path)
+    if magika_output is not None:
+        detected |= _parse_magika_json(magika_output, store)
 
     detected = _refine_detected(repo_path, detected)
     detected.discard(detect_os_template())

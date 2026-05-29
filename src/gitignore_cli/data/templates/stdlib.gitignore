@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/stdlib
+# Edit at https://www.toptal.com/developers/gitignore?templates=stdlib
+
+### StdLib ###
+/node_modules
+env.json
+
+# End of https://www.toptal.com/developers/gitignore/api/stdlib

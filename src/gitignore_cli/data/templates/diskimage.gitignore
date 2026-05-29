@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/diskimage
+# Edit at https://www.toptal.com/developers/gitignore?templates=diskimage
+
+### DiskImage ###
+*.dmg
+*.iso
+*.toast
+*.vcd
+
+# End of https://www.toptal.com/developers/gitignore/api/diskimage

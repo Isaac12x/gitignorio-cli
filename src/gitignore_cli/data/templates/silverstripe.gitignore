@@ -1,0 +1,15 @@
+# Created by https://www.toptal.com/developers/gitignore/api/silverstripe
+# Edit at https://www.toptal.com/developers/gitignore?templates=silverstripe
+
+### Silverstripe ###
+assets/_combinedfiles/
+assets/_resampled/
+assets/Uploads/
+silverstripe-cache/
+.env
+vendor/
+resources/
+themes/simple/
+public/resources/
+
+# End of https://www.toptal.com/developers/gitignore/api/silverstripe

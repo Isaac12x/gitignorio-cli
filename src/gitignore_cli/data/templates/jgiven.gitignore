@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/jgiven
+# Edit at https://www.toptal.com/developers/gitignore?templates=jgiven
+
+### JGiven ###
+jgiven-reports/
+
+# End of https://www.toptal.com/developers/gitignore/api/jgiven

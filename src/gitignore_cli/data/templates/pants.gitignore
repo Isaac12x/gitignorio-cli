@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/pants
+# Edit at https://www.toptal.com/developers/gitignore?templates=pants
+
+### Pants ###
+# Pants workspace files
+/.pants.*
+/dist/
+/.pids
+
+# End of https://www.toptal.com/developers/gitignore/api/pants

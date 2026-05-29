@@ -1,0 +1,13 @@
+# Created by https://www.toptal.com/developers/gitignore/api/awr
+# Edit at https://www.toptal.com/developers/gitignore?templates=awr
+
+### AWR ###
+### National Instruments AWR ###
+*.dsf
+*.dsf.ext
+*.dsf.ext*
+*.emi
+*.opt
+*.stderr.txt
+
+# End of https://www.toptal.com/developers/gitignore/api/awr

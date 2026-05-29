@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+import json
 import re
 from functools import lru_cache
-
-import httpx
+from importlib.resources import files
 
 API_BASE = "https://www.toptal.com/developers/gitignore/api"
 CANONICAL_URL = "https://www.toptal.com/developers/gitignore"
@@ -22,12 +22,15 @@ END_LINE = re.compile(
     re.MULTILINE,
 )
 
+_DATA_ROOT = files("gitignore_cli") / "data"
+
 
 class TemplateStore:
     def __init__(self) -> None:
         self._available: set[str] | None = None
         self._order: dict[str, int] | None = None
         self._section_titles: dict[str, str] = {}
+        self._template_cache: dict[str, str] = {}
 
     @property
     def available(self) -> set[str]:
@@ -44,27 +47,48 @@ class TemplateStore:
         return self._order
 
     def refresh(self) -> None:
-        with httpx.Client(timeout=30.0) as client:
-            list_response = client.get(f"{API_BASE}/list", params={"format": "lines"})
-            list_response.raise_for_status()
-            self._available = {
-                line.strip().lower()
-                for line in list_response.text.splitlines()
-                if line.strip()
-            }
+        list_text = (_DATA_ROOT / "list.txt").read_text(encoding="utf-8")
+        self._available = {
+            line.strip().lower()
+            for line in list_text.splitlines()
+            if line.strip()
+        }
 
-            order_response = client.get(f"{API_BASE}/order")
-            order_response.raise_for_status()
-            self._order = {key.lower(): value for key, value in order_response.json().items()}
+        order_text = (_DATA_ROOT / "order.json").read_text(encoding="utf-8")
+        self._order = {key.lower(): value for key, value in json.loads(order_text).items()}
+
+    def _load_template(self, template: str) -> str:
+        template = template.lower()
+        if template not in self._template_cache:
+            path = _DATA_ROOT / "templates" / f"{template}.gitignore"
+            self._template_cache[template] = path.read_text(encoding="utf-8")
+        return self._template_cache[template]
+
+    def _strip_template_wrapper(self, content: str) -> str:
+        body = content
+        if CREATED_LINE.search(body):
+            body = CREATED_LINE.split(body, maxsplit=1)[-1]
+        body = EDIT_LINE.sub("", body, count=1)
+        if END_LINE.search(body):
+            body = END_LINE.split(body)[0]
+        return body.strip()
 
     def fetch_templates(self, templates: list[str]) -> str:
         if not templates:
             return ""
-        key = ",".join(sorted(set(templates)))
-        with httpx.Client(timeout=30.0) as client:
-            response = client.get(f"{API_BASE}/{key}")
-            response.raise_for_status()
-            return response.text
+        ordered = self.sort_templates(list(set(templates)))
+        if len(ordered) == 1:
+            return self._load_template(ordered[0])
+
+        parts: list[str] = []
+        for template in ordered:
+            content = self._load_template(template)
+            sections = self.extract_sections(content)
+            if sections:
+                parts.append(sections[0][1].strip())
+            else:
+                parts.append(self._strip_template_wrapper(content))
+        return "\n\n".join(part for part in parts if part)
 
     def section_title(self, template: str) -> str:
         template = template.lower()
@@ -88,6 +112,8 @@ class TemplateStore:
 
         sections = self.extract_sections(body)
         content = "\n\n".join(section.strip() for _, section in sections if section.strip())
+        if not content:
+            content = body.strip()
         return (
             f"# Created by {API_BASE}/{joined}\n"
             f"# Edit at {CANONICAL_URL}?templates={joined}\n\n"

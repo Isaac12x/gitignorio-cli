@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/easybook
+# Edit at https://www.toptal.com/developers/gitignore?templates=easybook
+
+### easybook ###
+# Destination directory of the various publications
+Output
+
+# End of https://www.toptal.com/developers/gitignore/api/easybook

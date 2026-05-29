@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/docfx
+# Edit at https://www.toptal.com/developers/gitignore?templates=docfx
+
+### DocFx ###
+.cache
+/**/_site/
+
+# End of https://www.toptal.com/developers/gitignore/api/docfx

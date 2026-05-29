@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/eiffelstudio
+# Edit at https://www.toptal.com/developers/gitignore?templates=eiffelstudio
+
+### EiffelStudio ###
+# The compilation directory
+EIFGENs
+
+# End of https://www.toptal.com/developers/gitignore/api/eiffelstudio

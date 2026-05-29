@@ -1,0 +1,13 @@
+# Created by https://www.toptal.com/developers/gitignore/api/wintersmith
+# Edit at https://www.toptal.com/developers/gitignore?templates=wintersmith
+
+### Wintersmith ###
+contents/
+node_modules/
+plugins/
+templates/
+config.json
+package.json
+
+
+# End of https://www.toptal.com/developers/gitignore/api/wintersmith

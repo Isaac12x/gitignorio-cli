@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/blackbox
+# Edit at https://www.toptal.com/developers/gitignore?templates=blackbox
+
+### Blackbox ###
+# https://github.com/StackExchange/blackbox
+/keyrings/live/pubring.gpg~
+/keyrings/live/pubring.kbx~
+/keyrings/live/secring.gpg
+
+# End of https://www.toptal.com/developers/gitignore/api/blackbox

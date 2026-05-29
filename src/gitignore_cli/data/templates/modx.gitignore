@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/modx
+# Edit at https://www.toptal.com/developers/gitignore?templates=modx
+
+### MODX ###
+/core/cache/*
+!/core/cache/.gitkeep
+
+# Depends on how you version your MODX site
+/core/packages/*/*
+
+/core/import/*
+/core/export/*
+
+# End of https://www.toptal.com/developers/gitignore/api/modx

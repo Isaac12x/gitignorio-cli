@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/sourcepawn
+# Edit at https://www.toptal.com/developers/gitignore?templates=sourcepawn
+
+### SourcePawn ###
+# SourcePawn
+*.dll # extensions
+*.so # extensions
+*.smx # plugins
+
+# End of https://www.toptal.com/developers/gitignore/api/sourcepawn

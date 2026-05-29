@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/nohup
+# Edit at https://www.toptal.com/developers/gitignore?templates=nohup
+
+### Nohup ###
+nohup.out
+
+# End of https://www.toptal.com/developers/gitignore/api/nohup

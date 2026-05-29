@@ -1,0 +1,17 @@
+# Created by https://www.toptal.com/developers/gitignore/api/xojo
+# Edit at https://www.toptal.com/developers/gitignore?templates=xojo
+
+### Xojo ###
+# Xojo (formerly REALbasic and Real Studio)
+
+Builds*
+*.debug
+*.debug.app
+Debug*.exe
+Debug*/Debug*.exe
+Debug*/Debug*\ Libs
+*.rbuistate
+*.xojo_uistate
+*.obsolete*
+
+# End of https://www.toptal.com/developers/gitignore/api/xojo

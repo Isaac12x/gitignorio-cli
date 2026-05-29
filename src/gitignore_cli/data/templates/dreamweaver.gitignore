@@ -1,0 +1,13 @@
+# Created by https://www.toptal.com/developers/gitignore/api/dreamweaver
+# Edit at https://www.toptal.com/developers/gitignore?templates=dreamweaver
+
+### Dreamweaver ###
+# DW Dreamweaver added files
+_notes
+_compareTemp
+configs/
+dwsync.xml
+dw_php_codehinting.config
+*.mno
+
+# End of https://www.toptal.com/developers/gitignore/api/dreamweaver

@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/mercurial
+# Edit at https://www.toptal.com/developers/gitignore?templates=mercurial
+
+### Mercurial ###
+.hg/
+.hgignore
+.hgsigs
+.hgsub
+.hgsubstate
+.hgtags
+
+# End of https://www.toptal.com/developers/gitignore/api/mercurial

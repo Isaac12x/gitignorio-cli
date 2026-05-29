@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/splunk
+# Edit at https://www.toptal.com/developers/gitignore?templates=splunk
+
+### Splunk ###
+# gitignore template for Splunk apps
+# documentation: http://docs.splunk.com/Documentation/Splunk/6.2.3/admin/Defaultmetaconf
+
+# Splunk local meta file
+local.meta
+
+# Splunk local folder
+local
+
+# End of https://www.toptal.com/developers/gitignore/api/splunk

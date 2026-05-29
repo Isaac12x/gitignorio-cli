@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/azurefunctions
+# Edit at https://www.toptal.com/developers/gitignore?templates=azurefunctions
+
+### AzureFunctions ###
+# Azure Functions localsettings file
+local.settings.json
+
+# End of https://www.toptal.com/developers/gitignore/api/azurefunctions

@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/xill
+# Edit at https://www.toptal.com/developers/gitignore?templates=xill
+
+### Xill ###
+.project
+.xlib
+testit-reports/
+.generated-tests/
+generated-tests/
+xill.properties
+
+# End of https://www.toptal.com/developers/gitignore/api/xill

@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/buck
+# Edit at https://www.toptal.com/developers/gitignore?templates=buck
+
+### Buck ###
+buck-out/
+.buckconfig.local
+.buckd/
+.buckversion
+.fakebuckversion
+
+# End of https://www.toptal.com/developers/gitignore/api/buck

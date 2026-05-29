@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/ensime
+# Edit at https://www.toptal.com/developers/gitignore?templates=ensime
+
+### Ensime ###
+# Ensime specific
+.ensime
+.ensime_cache/
+.ensime_lucene/
+
+# End of https://www.toptal.com/developers/gitignore/api/ensime

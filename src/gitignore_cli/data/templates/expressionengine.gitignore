@@ -1,0 +1,25 @@
+# Created by https://www.toptal.com/developers/gitignore/api/expressionengine
+# Edit at https://www.toptal.com/developers/gitignore?templates=expressionengine
+
+### ExpressionEngine ###
+.DS_Store
+
+# Images
+images/avatars/
+images/captchas/
+images/smileys/
+images/member_photos/
+images/signature_attachments/
+images/pm_attachments/
+
+# For security do not publish the following files
+system/expressionengine/config/database.php
+system/expressionengine/config/config.php
+
+# Caches
+sized/
+thumbs/
+_thumbs/
+*/expressionengine/cache/*
+
+# End of https://www.toptal.com/developers/gitignore/api/expressionengine

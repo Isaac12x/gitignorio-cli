@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/games
+# Edit at https://www.toptal.com/developers/gitignore?templates=games
+
+### Games ###
+*.gam
+*.nes
+*.rom
+*.sav
+
+# End of https://www.toptal.com/developers/gitignore/api/games

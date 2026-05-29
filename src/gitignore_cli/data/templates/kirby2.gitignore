@@ -1,0 +1,21 @@
+# Created by https://www.toptal.com/developers/gitignore/api/kirby2
+# Edit at https://www.toptal.com/developers/gitignore?templates=kirby2
+
+### Kirby2 ###
+## Kirby 2 | http://getkirby.com
+
+# Exclude account information
+site/accounts/*
+!site/accounts/index.html
+assets/avatars/*
+!assets/avatars/.gitkeep
+
+# Exclude thumbnails
+thumbs/*
+!thumbs/index.html
+
+# Exclude cache
+site/cache/*
+!site/cache/index.html
+
+# End of https://www.toptal.com/developers/gitignore/api/kirby2

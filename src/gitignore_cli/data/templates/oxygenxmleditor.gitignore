@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/oxygenxmleditor
+# Edit at https://www.toptal.com/developers/gitignore?templates=oxygenxmleditor
+
+### oXygenXMLEditor ###
+# oXygen XML Editor by SyncRO Soft SRL
+# https://www.oxygenxml.com
+/**/out/
+
+# End of https://www.toptal.com/developers/gitignore/api/oxygenxmleditor

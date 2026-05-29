@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/remix+cloudflarepages
+# Edit at https://www.toptal.com/developers/gitignore?templates=remix+cloudflarepages
+
+### Remix+CloudflarePages ###
+/functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
+
+# End of https://www.toptal.com/developers/gitignore/api/remix+cloudflarepages

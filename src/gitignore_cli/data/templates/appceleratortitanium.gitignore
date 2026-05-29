@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/appceleratortitanium
+# Edit at https://www.toptal.com/developers/gitignore?templates=appceleratortitanium
+
+### AppceleratorTitanium ###
+# Build folder and log file
+build/
+build.log
+
+# End of https://www.toptal.com/developers/gitignore/api/appceleratortitanium

@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bittorrent
+# Edit at https://www.toptal.com/developers/gitignore?templates=bittorrent
+
+### BitTorrent ###
+*.torrent
+
+# End of https://www.toptal.com/developers/gitignore/api/bittorrent

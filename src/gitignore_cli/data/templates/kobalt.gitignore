@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/kobalt
+# Edit at https://www.toptal.com/developers/gitignore?templates=kobalt
+
+### Kobalt ###
+.kobalt
+kobaltBuild/
+
+
+# End of https://www.toptal.com/developers/gitignore/api/kobalt

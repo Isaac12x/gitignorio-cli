@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bricxcc
+# Edit at https://www.toptal.com/developers/gitignore?templates=bricxcc
+
+### BricxCC ###
+# Bricx Command Center IDE
+# http://bricxcc.sourceforge.net
+*.bak
+*.sym
+
+# End of https://www.toptal.com/developers/gitignore/api/bricxcc

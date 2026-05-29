@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/exercism
+# Edit at https://www.toptal.com/developers/gitignore?templates=exercism
+
+### Exercism ###
+# gitignore template for Exercism project
+# website: https://exercism.io/
+
+# Ignore .exercism folder which contain sensitive data
+.exercism
+
+# End of https://www.toptal.com/developers/gitignore/api/exercism

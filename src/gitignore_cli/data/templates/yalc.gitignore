@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/yalc
+# Edit at https://www.toptal.com/developers/gitignore?templates=yalc
+
+### yalc ###
+# yalc
+# https://www.npmjs.com/package/yalc/v/1.0.0-pre.17#keep-it-out-of-git
+
+.yalc
+yalc.lock
+
+# End of https://www.toptal.com/developers/gitignore/api/yalc

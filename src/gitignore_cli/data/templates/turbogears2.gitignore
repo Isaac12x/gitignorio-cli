@@ -1,0 +1,26 @@
+# Created by https://www.toptal.com/developers/gitignore/api/turbogears2
+# Edit at https://www.toptal.com/developers/gitignore?templates=turbogears2
+
+### TurboGears2 ###
+*.py[co]
+
+# Default development database
+devdata.db
+
+# Default data directory
+data/*
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# End of https://www.toptal.com/developers/gitignore/api/turbogears2

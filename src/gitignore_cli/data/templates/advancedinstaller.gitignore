@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/advancedinstaller
+# Edit at https://www.toptal.com/developers/gitignore?templates=advancedinstaller
+
+### AdvancedInstaller ###
+# Advanced Installer caches and default build output
+*-cache/
+*-SetupFiles/
+Prerequisites/
+
+# End of https://www.toptal.com/developers/gitignore/api/advancedinstaller

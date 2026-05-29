@@ -1,0 +1,28 @@
+# Created by https://www.toptal.com/developers/gitignore/api/oxideshop
+# Edit at https://www.toptal.com/developers/gitignore?templates=oxideshop
+
+### OxidEshop ###
+/vendor
+
+!/source
+/source/*
+/source/tmp
+
+!/source/Application
+/source/Application/translations
+/source/Application/views/admin
+/source/Application/views/azure
+/source/Application/views/flow
+
+!/source/modules
+/source/modules/*
+
+!/source/out
+/source/out/admin
+/source/out/azure
+/source/out/downloads
+/source/out/flow
+/source/out/media
+/source/out/pictures
+
+# End of https://www.toptal.com/developers/gitignore/api/oxideshop

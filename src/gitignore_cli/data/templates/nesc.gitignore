@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/nesc
+# Edit at https://www.toptal.com/developers/gitignore?templates=nesc
+
+### NesC ###
+# telosB build folder
+build/
+
+# End of https://www.toptal.com/developers/gitignore/api/nesc

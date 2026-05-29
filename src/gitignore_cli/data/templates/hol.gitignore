@@ -1,0 +1,17 @@
+# Created by https://www.toptal.com/developers/gitignore/api/hol
+# Edit at https://www.toptal.com/developers/gitignore?templates=hol
+
+### HOL ###
+*Script
+
+# Holmake generated files
+*Theory.sig
+*Theory.sml
+*.uo
+*.ui
+
+# Holmake auxiliary files
+.hollogs
+.HOLMK
+
+# End of https://www.toptal.com/developers/gitignore/api/hol

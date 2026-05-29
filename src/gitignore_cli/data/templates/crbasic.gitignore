@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/crbasic
+# Edit at https://www.toptal.com/developers/gitignore?templates=crbasic
+
+### CRBasic ###
+# optional table definintions created at compile time
+*.tdf
+
+# any encrypted files
+*_Enc.*
+
+# End of https://www.toptal.com/developers/gitignore/api/crbasic

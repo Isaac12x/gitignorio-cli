@@ -1,0 +1,19 @@
+# Created by https://www.toptal.com/developers/gitignore/api/fontforge
+# Edit at https://www.toptal.com/developers/gitignore?templates=fontforge
+
+### FontForge ###
+*.sfd-*
+*.sfd~
+
+# No Binaries
+
+*.ttf
+*.ttc
+*.otf
+*.woff
+*.pfb
+*.pfa
+*.pt3
+*.suit
+
+# End of https://www.toptal.com/developers/gitignore/api/fontforge

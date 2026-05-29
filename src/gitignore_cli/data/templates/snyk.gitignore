@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/snyk
+# Edit at https://www.toptal.com/developers/gitignore?templates=snyk
+
+### Snyk ###
+# DeepCode
+.dccache
+
+# End of https://www.toptal.com/developers/gitignore/api/snyk

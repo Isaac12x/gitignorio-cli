@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/dotfilessh
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotfilessh
+
+### DotfilesSh ###
+local-patch
+patched-src
+
+# End of https://www.toptal.com/developers/gitignore/api/dotfilessh

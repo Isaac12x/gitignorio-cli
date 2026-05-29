@@ -1,0 +1,16 @@
+# Created by https://www.toptal.com/developers/gitignore/api/defold
+# Edit at https://www.toptal.com/developers/gitignore?templates=defold
+
+### Defold ###
+/.internal
+/build
+.externalToolBuilders
+.DS_Store
+Thumbs.db
+.lock-wscript
+*.pyc
+.project
+.cproject
+builtins
+
+# End of https://www.toptal.com/developers/gitignore/api/defold

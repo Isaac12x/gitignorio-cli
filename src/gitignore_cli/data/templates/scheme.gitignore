@@ -1,0 +1,13 @@
+# Created by https://www.toptal.com/developers/gitignore/api/scheme
+# Edit at https://www.toptal.com/developers/gitignore?templates=scheme
+
+### Scheme ###
+*.ss~
+*.ss#*
+.#*.ss
+
+*.scm~
+*.scm#*
+.#*.scm
+
+# End of https://www.toptal.com/developers/gitignore/api/scheme

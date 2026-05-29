@@ -1,0 +1,19 @@
+# Created by https://www.toptal.com/developers/gitignore/api/mercury
+# Edit at https://www.toptal.com/developers/gitignore?templates=mercury
+
+### Mercury ###
+Mercury/
+Mercury.modules
+*.mh
+*.err
+*.init
+*.dll
+*.exe
+*.a
+*.so
+*.dylib
+*.beams
+*.d
+*.c_date
+
+# End of https://www.toptal.com/developers/gitignore/api/mercury

@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/codesniffer
+# Edit at https://www.toptal.com/developers/gitignore?templates=codesniffer
+
+### CodeSniffer ###
+# gitignore for the PHP Codesniffer framework
+# website: https://github.com/squizlabs/PHP_CodeSniffer
+#
+# Recommended template: PHP.gitignore
+
+/wpcs/*
+
+# End of https://www.toptal.com/developers/gitignore/api/codesniffer

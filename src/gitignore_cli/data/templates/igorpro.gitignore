@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/igorpro
+# Edit at https://www.toptal.com/developers/gitignore?templates=igorpro
+
+### IGORPro ###
+# Avoid including Experiment files: they can be created and edited locally to test the ipf files
+*.pxp
+*.pxt
+*.uxp
+*.uxt
+
+# End of https://www.toptal.com/developers/gitignore/api/igorpro

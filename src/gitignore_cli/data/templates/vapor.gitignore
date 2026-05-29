@@ -1,0 +1,15 @@
+# Created by https://www.toptal.com/developers/gitignore/api/vapor
+# Edit at https://www.toptal.com/developers/gitignore?templates=vapor
+
+### Vapor ###
+Config/secrets
+
+### Vapor Patch ###
+Packages
+.build/
+xcuserdata
+DerivedData/
+*.xcodeproj
+
+
+# End of https://www.toptal.com/developers/gitignore/api/vapor

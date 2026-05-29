@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/lsspice
+# Edit at https://www.toptal.com/developers/gitignore?templates=lsspice
+
+### LSspice ###
+### LTspice ###
+*.raw
+
+# End of https://www.toptal.com/developers/gitignore/api/lsspice

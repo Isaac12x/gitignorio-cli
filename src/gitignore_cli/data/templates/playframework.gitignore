@@ -1,0 +1,22 @@
+# Created by https://www.toptal.com/developers/gitignore/api/playframework
+# Edit at https://www.toptal.com/developers/gitignore?templates=playframework
+
+### PlayFramework ###
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.eml
+/dist/
+.cache
+
+# End of https://www.toptal.com/developers/gitignore/api/playframework

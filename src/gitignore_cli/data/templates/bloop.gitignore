@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bloop
+# Edit at https://www.toptal.com/developers/gitignore?templates=bloop
+
+### Bloop ###
+.bloop/
+
+# End of https://www.toptal.com/developers/gitignore/api/bloop

@@ -1,0 +1,13 @@
+# Created by https://www.toptal.com/developers/gitignore/api/cakephp3
+# Edit at https://www.toptal.com/developers/gitignore?templates=cakephp3
+
+### CakePHP3 ###
+# CakePHP 3
+
+/config/app.php
+/config/.env
+/logs/*
+/tmp/*
+/vendor/*
+
+# End of https://www.toptal.com/developers/gitignore/api/cakephp3

@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/xcodeinjection
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcodeinjection
+
+### XcodeInjection ###
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+
+# End of https://www.toptal.com/developers/gitignore/api/xcodeinjection

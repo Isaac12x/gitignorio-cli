@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/docpress
+# Edit at https://www.toptal.com/developers/gitignore?templates=docpress
+
+### Docpress ###
+# docpress documentation generator: https://docpress.github.io/index.html
+
+_docpress/
+
+# End of https://www.toptal.com/developers/gitignore/api/docpress

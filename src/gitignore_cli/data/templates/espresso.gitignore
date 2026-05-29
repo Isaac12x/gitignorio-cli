@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/espresso
+# Edit at https://www.toptal.com/developers/gitignore?templates=espresso
+
+### Espresso ###
+*.esproj
+
+# End of https://www.toptal.com/developers/gitignore/api/espresso

@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/redis
+# Edit at https://www.toptal.com/developers/gitignore?templates=redis
+
+### Redis ###
+# Ignore redis binary dump (dump.rdb) files
+
+*.rdb
+
+# End of https://www.toptal.com/developers/gitignore/api/redis

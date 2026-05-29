@@ -1,0 +1,22 @@
+# Created by https://www.toptal.com/developers/gitignore/api/purebasic
+# Edit at https://www.toptal.com/developers/gitignore?templates=purebasic
+
+### PureBasic ###
+# PureBasic
+
+# Settings files
+*.pb.cfg
+*.pbi.cfg
+project.cfg
+
+# Shared libraries
+*.so
+*.dylib
+*.dll
+
+# Binary executables
+*.exe
+*.app
+*.out
+
+# End of https://www.toptal.com/developers/gitignore/api/purebasic

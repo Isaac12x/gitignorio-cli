@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/ninja
+# Edit at https://www.toptal.com/developers/gitignore?templates=ninja
+
+### Ninja ###
+.ninja_deps
+.ninja_log
+
+# End of https://www.toptal.com/developers/gitignore/api/ninja

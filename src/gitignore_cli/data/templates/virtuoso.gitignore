@@ -1,0 +1,24 @@
+# Created by https://www.toptal.com/developers/gitignore/api/virtuoso
+# Edit at https://www.toptal.com/developers/gitignore?templates=virtuoso
+
+### Virtuoso ###
+# Gitignore for Cadence Virtuoso
+################################################################
+
+# Log files
+*.log
+panic*.log.*
+
+# OpenAccess database lock files
+*.cdslck*
+
+# Run directories for layout vs. schematic and design rule check
+lvsRunDir/*
+drcRunDir/*
+
+# Abstract generation tool
+abstract.log*
+abstract.record*
+
+
+# End of https://www.toptal.com/developers/gitignore/api/virtuoso

@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/specflow
+# Edit at https://www.toptal.com/developers/gitignore?templates=specflow
+
+### SpecFlow ###
+# Feature Files
+*.feature.cs
+*.feature.xlsx.*
+
+# End of https://www.toptal.com/developers/gitignore/api/specflow

@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/scrivener
+# Edit at https://www.toptal.com/developers/gitignore?templates=scrivener
+
+### Scrivener ###
+*/Files/binder.autosave
+*/Files/binder.backup
+*/Files/search.indexes
+*/Files/user.lock
+*/Files/Docs/docs.checksum
+*/Files/Data/docs.checksum
+*/QuickLook/
+*/Settings/ui.plist
+
+# End of https://www.toptal.com/developers/gitignore/api/scrivener

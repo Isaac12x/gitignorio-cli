@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bookdown
+# Edit at https://www.toptal.com/developers/gitignore?templates=bookdown
+
+### Bookdown ###
+# R package: bookdown caching files
+/*_files/
+
+# End of https://www.toptal.com/developers/gitignore/api/bookdown

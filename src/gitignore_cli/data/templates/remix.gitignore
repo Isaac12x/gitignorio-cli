@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/remix
+# Edit at https://www.toptal.com/developers/gitignore?templates=remix
+
+### Remix ###
+node_modules
+/.cache
+/build
+/public/build
+.env
+
+# End of https://www.toptal.com/developers/gitignore/api/remix

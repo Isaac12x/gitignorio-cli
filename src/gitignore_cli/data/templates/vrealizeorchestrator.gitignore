@@ -1,0 +1,29 @@
+# Created by https://www.toptal.com/developers/gitignore/api/vrealizeorchestrator
+# Edit at https://www.toptal.com/developers/gitignore?templates=vrealizeorchestrator
+
+### vRealizeOrchestrator ###
+# Default Resource Elements
+Resources/Library/*
+
+# Library Workflows
+Workflows/Library
+
+# Environment Specific variables
+Configurations/*
+
+# Multi-Node Workflows
+Workflows/VCO@*
+
+# All Packages
+**/Packages/
+
+# Test actions
+Actions/test/*
+
+# All packages, resources, configurations, policies and Workflows
+**/Resources/
+**/Configurations/
+**/Workflows/
+**/Policy Templates/
+
+# End of https://www.toptal.com/developers/gitignore/api/vrealizeorchestrator

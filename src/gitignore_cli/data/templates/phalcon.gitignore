@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/phalcon
+# Edit at https://www.toptal.com/developers/gitignore?templates=phalcon
+
+### Phalcon ###
+/cache/
+/config/development/
+
+# End of https://www.toptal.com/developers/gitignore/api/phalcon

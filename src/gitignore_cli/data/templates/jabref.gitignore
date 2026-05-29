@@ -1,0 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/jabref
+# Edit at https://www.toptal.com/developers/gitignore?templates=jabref
+
+### JabRef ###
+# JabRef - https://www.jabref.org/
+*.bak
+*.sav
+
+# End of https://www.toptal.com/developers/gitignore/api/jabref

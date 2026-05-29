@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/diff
+# Edit at https://www.toptal.com/developers/gitignore?templates=diff
+
+### Diff ###
+*.patch
+*.diff
+
+# End of https://www.toptal.com/developers/gitignore/api/diff

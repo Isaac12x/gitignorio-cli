@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/tortoisegit
+# Edit at https://www.toptal.com/developers/gitignore?templates=tortoisegit
+
+### TortoiseGit ###
+# Project-level settings
+/.tgitconfig
+
+# End of https://www.toptal.com/developers/gitignore/api/tortoisegit

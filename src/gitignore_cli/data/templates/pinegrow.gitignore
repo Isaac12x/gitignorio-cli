@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/pinegrow
+# Edit at https://www.toptal.com/developers/gitignore?templates=pinegrow
+
+### PineGrow ###
+#Pinegrow backup files
+_pgbackup/*
+
+#Pinegrow setting file
+pinegrow.json
+
+# End of https://www.toptal.com/developers/gitignore/api/pinegrow

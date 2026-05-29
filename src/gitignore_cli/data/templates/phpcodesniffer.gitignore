@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/phpcodesniffer
+# Edit at https://www.toptal.com/developers/gitignore?templates=phpcodesniffer
+
+### PHPCodeSniffer ###
+# CodeSniffer
+phpcs.xml
+
+/vendor/*
+/wpcs/*
+
+# End of https://www.toptal.com/developers/gitignore/api/phpcodesniffer

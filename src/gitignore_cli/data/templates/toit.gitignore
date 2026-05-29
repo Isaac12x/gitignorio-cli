@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/toit
+# Edit at https://www.toptal.com/developers/gitignore?templates=toit
+
+### Toit ###
+# Package downloads
+.packages/
+
+# End of https://www.toptal.com/developers/gitignore/api/toit

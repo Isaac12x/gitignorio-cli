@@ -1,0 +1,11 @@
+# Created by https://www.toptal.com/developers/gitignore/api/grunt
+# Edit at https://www.toptal.com/developers/gitignore?templates=grunt
+
+### grunt ###
+# Grunt usually compiles files inside this directory
+dist/
+
+# Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
+.tmp/
+
+# End of https://www.toptal.com/developers/gitignore/api/grunt

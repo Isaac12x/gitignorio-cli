@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/sketchup
+# Edit at https://www.toptal.com/developers/gitignore?templates=sketchup
+
+### SketchUp ###
+*.skb
+
+# End of https://www.toptal.com/developers/gitignore/api/sketchup

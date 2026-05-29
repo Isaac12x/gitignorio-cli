@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/bazaar
+# Edit at https://www.toptal.com/developers/gitignore?templates=bazaar
+
+### Bazaar ###
+.bzr/
+.bzrignore
+
+# End of https://www.toptal.com/developers/gitignore/api/bazaar

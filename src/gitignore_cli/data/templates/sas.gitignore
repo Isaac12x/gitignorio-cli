@@ -1,0 +1,20 @@
+# Created by https://www.toptal.com/developers/gitignore/api/sas
+# Edit at https://www.toptal.com/developers/gitignore?templates=sas
+
+### SAS ###
+# Binary data formats
+*.sas7baud
+*.sas7bdat
+*.sas7bvew
+*.sas7bndx
+*.sas7bcat
+*.sas7bacs
+*.sas7bfdb
+*.sas7bmdb
+*.sas7bdmd
+*.sas7bitm
+*.sas7butl
+*.sas7bput
+*.sas7bbak
+
+# End of https://www.toptal.com/developers/gitignore/api/sas

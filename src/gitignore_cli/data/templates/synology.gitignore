@@ -1,0 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/synology
+# Edit at https://www.toptal.com/developers/gitignore?templates=synology
+
+### Synology ###
+# Thumbnails
+@eaDir
+# Recycle bin
+\#recycle
+
+# End of https://www.toptal.com/developers/gitignore/api/synology

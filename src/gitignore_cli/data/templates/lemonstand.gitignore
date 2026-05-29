@@ -1,0 +1,27 @@
+# Created by https://www.toptal.com/developers/gitignore/api/lemonstand
+# Edit at https://www.toptal.com/developers/gitignore?templates=lemonstand
+
+### LemonStand ###
+boot.php
+index.php
+install.php
+/config/*
+!/config/config.php
+/controllers/*
+/init/*
+/logs/*
+/phproad/*
+/temp/*
+/uploaded/*
+/installer_files/*
+/modules/backend/*
+/modules/blog/*
+/modules/cms/*
+/modules/core/*
+/modules/session/*
+/modules/shop/*
+/modules/system/*
+/modules/users/*
+# add content_*.php if you don't want erase client changes to content
+
+# End of https://www.toptal.com/developers/gitignore/api/lemonstand

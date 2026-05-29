@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/putty
+# Edit at https://www.toptal.com/developers/gitignore?templates=putty
+
+### PuTTY ###
+# Private key
+*.ppk
+
+# End of https://www.toptal.com/developers/gitignore/api/putty

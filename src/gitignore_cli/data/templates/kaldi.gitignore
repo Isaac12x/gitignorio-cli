@@ -1,0 +1,8 @@
+# Created by https://www.toptal.com/developers/gitignore/api/kaldi
+# Edit at https://www.toptal.com/developers/gitignore?templates=kaldi
+
+### kaldi ###
+exp/
+data/
+
+# End of https://www.toptal.com/developers/gitignore/api/kaldi

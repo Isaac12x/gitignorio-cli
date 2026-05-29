@@ -1,0 +1,21 @@
+# Created by https://www.toptal.com/developers/gitignore/api/pvs
+# Edit at https://www.toptal.com/developers/gitignore?templates=pvs
+
+### PVS ###
+# Ignore binary files
+pvsbin/
+bin/
+lib/
+*.bin
+.pvscontext
+# Ignore orphaned and old proofs
+orphaned-proofs.prf
+*.prf~
+# Ignore compiled Lisp files
+*fasl
+# Ignore PVS dump files
+*.dmp
+# Ignore PVS log files
+*.log
+
+# End of https://www.toptal.com/developers/gitignore/api/pvs

@@ -1,0 +1,7 @@
+# Created by https://www.toptal.com/developers/gitignore/api/goodsync
+# Edit at https://www.toptal.com/developers/gitignore?templates=goodsync
+
+### GoodSync ###
+_gsdata_
+
+# End of https://www.toptal.com/developers/gitignore/api/goodsync

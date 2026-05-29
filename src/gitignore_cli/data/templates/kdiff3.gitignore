@@ -1,0 +1,16 @@
+# Created by https://www.toptal.com/developers/gitignore/api/kdiff3
+# Edit at https://www.toptal.com/developers/gitignore?templates=kdiff3
+
+### KDiff3 ###
+*.BACKUP.*
+*_BACKUP_*
+*.BASE.*
+*_BASE_*
+*.LOCAL.*
+*_LOCAL_*
+*.REMOTE.*
+*_REMOTE_*
+*.orig
+
+
+# End of https://www.toptal.com/developers/gitignore/api/kdiff3
