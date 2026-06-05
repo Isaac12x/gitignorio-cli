@@ -1,8 +1,16 @@
-# gitignore-cli
+# gitignorio-cli
 
 Create and update `.gitignore` files using [gitignore.io](https://www.toptal.com/developers/gitignore) with automatic language detection.
 
-## Install
+Install from PyPI:
+
+```bash
+pip install gitignorio-cli
+# or
+uv tool install gitignorio-cli
+```
+
+For local development:
 
 ```bash
 uv tool install .
@@ -12,13 +20,15 @@ pip install .
 
 ## Usage
 
+The command is `gi`:
+
 ```bash
-gitignore create              # OS template + detected languages
-gitignore create --no-detect  # OS template only
-gitignore update              # append newly detected languages
-gitignore add python node     # append specific templates
-gitignore list                # list available templates
-gitignore hooks install       # auto-create/update .gitignore via git hooks
+gi create              # OS template + detected languages
+gi create --no-detect  # OS template only
+gi update              # append newly detected languages
+gi add python node     # append specific templates
+gi list                # list available templates
+gi hooks install       # auto-create/update .gitignore via git hooks
 ```
 
 Use `--path` / `-p` to target a directory other than the current one.
@@ -28,8 +38,8 @@ Use `--path` / `-p` to target a directory other than the current one.
 Install hooks once per repository (or use `--global` to seed new repos created with `git init`):
 
 ```bash
-gitignore hooks install
-gitignore hooks install --global
+gi hooks install
+gi hooks install --global
 ```
 
 This installs:
@@ -39,7 +49,7 @@ This installs:
 
 Existing hook scripts managed by gitignore-cli are updated in place. Other hook scripts are left intact and receive an appended gitignore-cli block.
 
-Running `gitignore hooks install` also creates `.gitignore` immediately when it is missing in the current repository.
+Running `gi hooks install` also creates `.gitignore` immediately when it is missing in the current repository.
 
 ## Language detection
 

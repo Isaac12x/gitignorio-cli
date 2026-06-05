@@ -20,7 +20,7 @@ INIT_BODY = """\
 # Create .gitignore when a repository is initialized (clone/checkout).
 root="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
 if [ ! -f "$root/.gitignore" ]; then
-  gitignore create --path "$root" 2>/dev/null || true
+  gi create --path "$root" 2>/dev/null || true
 fi
 """
 
@@ -28,9 +28,9 @@ SYNC_BODY = """\
 # Sync .gitignore before pushing (update if present, create if missing).
 root="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
 if [ -f "$root/.gitignore" ]; then
-  gitignore update --path "$root" 2>/dev/null || true
+  gi update --path "$root" 2>/dev/null || true
 else
-  gitignore create --path "$root" 2>/dev/null || true
+  gi create --path "$root" 2>/dev/null || true
 fi
 """
 

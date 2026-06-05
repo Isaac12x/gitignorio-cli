@@ -5,20 +5,23 @@ import re
 from functools import lru_cache
 from importlib.resources import files
 
-API_BASE = "https://www.toptal.com/developers/gitignore/api"
-CANONICAL_URL = "https://www.toptal.com/developers/gitignore"
+API_BASE = "https://gitignore.org/api"
+CANONICAL_URL = "https://gitignore.org"
+
+_API_PAT = r"(?:https://(?:gitignore\.org|(?:www\.)?gitignore\.io|www\.toptal\.com/developers/gitignore)/api)"
+_EDIT_PAT = r"(?:https://(?:gitignore\.org|(?:www\.)?gitignore\.io|www\.toptal\.com/developers/gitignore))"
 
 CREATED_LINE = re.compile(
-    r"^# Created by https://www\.toptal\.com/developers/gitignore/api/([^\s]+)\s*$",
+    rf"^# Created by {_API_PAT}/([^\s]+)\s*$",
     re.MULTILINE,
 )
 EDIT_LINE = re.compile(
-    r"^# Edit at https://www\.toptal\.com/developers/gitignore\?templates=([^\s]+)\s*$",
+    rf"^# Edit at {_EDIT_PAT}\?templates=([^\s]+)\s*$",
     re.MULTILINE,
 )
 SECTION_HEADER = re.compile(r"^### (.+?) ###\s*$", re.MULTILINE)
 END_LINE = re.compile(
-    r"^# End of https://www\.toptal\.com/developers/gitignore/api/[^\s]+\s*$",
+    rf"^# End of {_API_PAT}/[^\s]+\s*$",
     re.MULTILINE,
 )
 

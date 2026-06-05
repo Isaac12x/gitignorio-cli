@@ -242,6 +242,6 @@ def normalize_user_template(name: str, store: TemplateStore) -> str:
     if not resolved:
         raise ValueError(
             f"Unknown gitignore template '{name}'. "
-            "Run `gitignore list` or see https://www.toptal.com/developers/gitignore/api/list"
+            "Run `gi list` or see https://www.toptal.com/developers/gitignore/api/list"
         )
     return resolved

@@ -8,6 +8,12 @@ import typer
 from gitignore_cli.deps import ensure_detection_tools
 from gitignore_cli.detect import detect_languages, detect_os_template, normalize_user_template
 from gitignore_cli.file import GitignoreFile
+from gitignore_cli.global_gitignore import (
+    detect_editors,
+    get_global_gitignore_path,
+    install_global,
+    update_global,
+)
 from gitignore_cli.hooks import install_global_template, install_repo_hooks
 from gitignore_cli.templates import get_store
 
@@ -77,7 +83,7 @@ def update(
     os_template = detect_os_template()
 
     if not gitignore_path.exists():
-        typer.echo(f"No .gitignore found at {gitignore_path}. Run `gitignore create` first.", err=True)
+        typer.echo(f"No .gitignore found at {gitignore_path}. Run `gi create` first.", err=True)
         raise typer.Exit(code=1)
 
     document = GitignoreFile.load(gitignore_path, store)
@@ -115,7 +121,7 @@ def add(
     store = get_store()
 
     if not gitignore_path.exists():
-        typer.echo(f"No .gitignore found at {gitignore_path}. Run `gitignore create` first.", err=True)
+        typer.echo(f"No .gitignore found at {gitignore_path}. Run `gi create` first.", err=True)
         raise typer.Exit(code=1)
 
     document = GitignoreFile.load(gitignore_path, store)
@@ -149,6 +155,75 @@ def list_templates() -> None:
     store = get_store()
     for template in store.sort_templates(list(store.available)):
         typer.echo(template)
+
+
+global_app = typer.Typer(help="Manage the user-level global gitignore (~/.gitignore_global).")
+app.add_typer(global_app, name="global")
+
+
+@global_app.command("install")
+def global_install(
+    editor: list[str] = typer.Option(
+        [],
+        "--editor",
+        "-e",
+        help="Editor template to include (repeatable). Example: --editor vim --editor vscode",
+    ),
+    path: Optional[Path] = typer.Option(
+        None,
+        "--path",
+        "-p",
+        help="Override path for the global gitignore file.",
+    ),
+    no_detect: bool = typer.Option(
+        False,
+        "--no-detect",
+        help="Skip automatic editor detection; only include the OS template.",
+    ),
+) -> None:
+    """Create or overwrite the global gitignore and configure core.excludesFile."""
+    editors: list[str] | None = list(editor) if editor else None
+    if no_detect:
+        editors = list(editor)
+
+    global_path, templates, detected = install_global(
+        editors=editors,
+        path=path,
+        detect=not no_detect,
+    )
+    typer.echo(f"Created {global_path} with templates: {', '.join(templates)}")
+    if detected:
+        typer.echo(f"Auto-detected editors: {', '.join(detected)}")
+    typer.echo(f"Configured git config --global core.excludesFile={global_path}")
+
+
+@global_app.command("update")
+def global_update_cmd(
+    path: Optional[Path] = typer.Option(
+        None,
+        "--path",
+        "-p",
+        help="Override path for the global gitignore file.",
+    ),
+) -> None:
+    """Append any missing OS template to the global gitignore (non-destructive)."""
+    global_path, added = update_global(path=path)
+    if added:
+        typer.echo(f"Added: {', '.join(added)}")
+        typer.echo(f"Updated {global_path}")
+    else:
+        typer.echo("No changes needed.")
+
+
+@global_app.command("show")
+def global_show() -> None:
+    """Print the global gitignore path and its contents."""
+    path = get_global_gitignore_path()
+    typer.echo(f"# Path: {path}")
+    if path.exists():
+        typer.echo(path.read_text(encoding="utf-8"))
+    else:
+        typer.echo("# File does not exist. Run `gi global install` to create it.")
 
 
 hooks_app = typer.Typer(help="Install git hooks for automatic .gitignore management.")
